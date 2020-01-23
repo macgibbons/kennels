@@ -4,10 +4,12 @@ import "./Kennel.css"
 import "./animal/Animals.css"
 import Customer from "./customer/Customer";
 import "./customer/Customers.css"
-import Location from "./location/Location";
+// import Location from "./location/Location";
 import "./location/Locations.css"
 import Employees from "./employee/Employees";
 import "./employee/Employees.css"
+import LocationList from "./location/LocationList";
+import { LocationProvider } from "./location/LocationProvider";
 
 
 export default () => (
@@ -26,17 +28,21 @@ export default () => (
             <Animal />
             <Animal />
         </article>
+
         <h2>Employees</h2>
         <article className="employees">
             <Employees />
             <Employees />
             <Employees />
         </article>
+
         <h2>Locations</h2>
         <article className="locations">
-            <Location />
-            <Location />
+          <LocationProvider>
+            <LocationList />
+          </LocationProvider>
         </article>
+        
         <h2>Customers</h2>
         <article className="customers">
             <Customer />
