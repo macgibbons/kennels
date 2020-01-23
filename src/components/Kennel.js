@@ -7,6 +7,7 @@ import "./customer/Customers.css"
 // import Location from "./location/Location";
 import "./location/Locations.css"
 import "./employee/Employees.css"
+import "./animal/Animals.css"
 import LocationList from "./location/LocationList";
 import { LocationProvider } from "./location/LocationProvider";
 import { AnimalProvider } from "./animal/AnimalProvider";

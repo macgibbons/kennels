@@ -17,6 +17,7 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Patua One', serif;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 p {
@@ -30,5 +31,13 @@ strong {
 }
 
 address {
+  text-align: center;
   margin: 0 0 1.5em;
+}
+
+small {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
 }
