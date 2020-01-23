@@ -6,7 +6,6 @@ import "./animal/Animals.css"
 import "./customer/Customers.css"
 // import Location from "./location/Location";
 import "./location/Locations.css"
-import Employees from "./employee/Employees";
 import "./employee/Employees.css"
 import LocationList from "./location/LocationList";
 import { LocationProvider } from "./location/LocationProvider";
@@ -14,6 +13,8 @@ import { AnimalProvider } from "./animal/AnimalProvider";
 import AnimalList from "./animal/AnimalList";
 import { CustomerProvider } from "./customer/CustomerProvider";
 import CustomerList from "./customer/CustomerList";
+import { EmployeeProvider } from "./employee/EmployeeProvider";
+import EmployeeList from "./employee/EmployeeList";
 
 
 export default () => (
@@ -35,9 +36,9 @@ export default () => (
 
         <h2>Employees</h2>
         <article className="employees">
-            <Employees />
-            <Employees />
-            <Employees />
+            <EmployeeProvider>
+                <EmployeeList />
+            </EmployeeProvider>
         </article>
 
         <h2>Locations</h2>
