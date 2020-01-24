@@ -35,7 +35,6 @@ export default props => {
         <form className="employeeForm">
             <h2 className="employeeForm__title">New Employee</h2>
             <div className="form-group">
-                <label htmlFor="employeeName">Employee name</label>
                 <input
                     type="text"
                     id="employeeName"
@@ -48,7 +47,6 @@ export default props => {
                 
             </div>
             <div className="form-group">
-                <label htmlFor="location">Assign to location</label>
                 <select
                     defaultValue=""
                     name="location"
@@ -74,7 +72,7 @@ export default props => {
                 }
               
                
-                className="btn btn-primary">
+                className="btn btn-primary form-group">
                 Save Employee
             </button>
         </form>

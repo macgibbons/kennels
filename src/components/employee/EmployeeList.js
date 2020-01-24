@@ -9,7 +9,7 @@ export default (props) => {
     return (
         <div className="employees">
             <h1>Employees</h1>
-            <button onClick={() => props.history.push("/employees/create")}>
+            <button className="employeeButton" onClick={() => props.history.push("/employees/create")}>
                 Add Employee
             </button>
             <article className="employeeList">
