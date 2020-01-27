@@ -5,13 +5,37 @@ import { CustomerContext } from "../customer/CustomerProvider"
 import Animal from "./Animal"
 import "./Animals.css"
 
-export default () => {
+export default (props) => {
     const { animals } = useContext(AnimalContext)
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)
+    const currentUser = localStorage.getItem("kennel_customer")
+    console.log(currentUser);
+
+    const logInCheck = () => {
+        if(currentUser === ""){
+            window.alert("please log in")
+        } else {
+            console.log("user is logged in");
+            
+            updateApplicationView()
+        
+        }
+    }
+
+    const updateApplicationView = () => {
+        props.history.push("/animals/create")
+    }
+    
 
     return (
         <div className="animals">
+            <h1>Animals</h1>
+            <button className="animalButton" onClick={ logInCheck
+            }>
+                Make an Appointment
+            </button>
+            <article>
             {
                 animals.map(animal => {
                     const owner = customers.find(c => c.id === animal.customerId)
@@ -23,6 +47,8 @@ export default () => {
                                 animal={animal} />
                 })                
             }
+            
+            </article>
         </div>
     )
 }
