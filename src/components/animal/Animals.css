@@ -1,16 +1,40 @@
 .animals {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: auto;
   }
   
+  .animalList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .animal {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      border-radius: 4px;
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .animalForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+    max-width: 30%;
+    padding: 25px;
+    margin-left: 33%;
+    margin-top: 100px;
+  }
+
+  .form-group {
+    margin: 20px 0 10px 0;
   }

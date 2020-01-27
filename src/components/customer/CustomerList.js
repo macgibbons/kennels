@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import { CustomerContext } from "./CustomerProvider";
 import Customer from "./Customer";
 import "./Customers.css"
+import "../style/Button.css"
 
 
 export default () => {

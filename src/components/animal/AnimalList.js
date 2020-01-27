@@ -35,9 +35,12 @@ export default (props) => {
             }>
                 Make an Appointment
             </button>
-            <article>
+            <div className="animalList">
+
             {
                 animals.map(animal => {
+
+                    
                     const owner = customers.find(c => c.id === animal.customerId)
                     const clinic = locations.find(l => l.id === animal.locationId)
 
@@ -48,7 +51,7 @@ export default (props) => {
                 })                
             }
             
-            </article>
+            </div>
         </div>
     )
 }
