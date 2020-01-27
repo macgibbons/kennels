@@ -10,6 +10,7 @@ import CustomerList from "./customer/CustomerList"
 import EmployeeList from "./employee/EmployeeList"
 import EmployeeForm from "./employee/EmployeeForm"
 import AnimalForm from "./animal/AnimalForm";
+import AnimalDetail from "./animal/AnimalDetail";
 
 
 export default (props) => {
@@ -31,6 +32,10 @@ export default (props) => {
     
                         <Route exact path="/animals/create" render = {
                             props => <AnimalForm {...props} />
+                        } />
+
+                        <Route path="/animals/:animalId(\d+)" render={
+                            props => <AnimalDetail {...props} />
                         } />
                        
                     </CustomerProvider>
