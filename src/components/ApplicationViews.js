@@ -11,16 +11,24 @@ import EmployeeList from "./employee/EmployeeList"
 import EmployeeForm from "./employee/EmployeeForm"
 import AnimalForm from "./animal/AnimalForm";
 import AnimalDetail from "./animal/AnimalDetail";
-
+import LocationDetail from "./location/LocationDetail";
 
 export default (props) => {
     return (
         <>
             <LocationProvider>
-                {/* Render the location list when http://localhost:3000/ */}
-                <Route exact path="/">
-                    <LocationList />
-                </Route>
+                <AnimalProvider>
+                    <EmployeeProvider>
+                        {/* Render the location list when http://localhost:3000/ */}
+                        <Route exact path="/">
+                            <LocationList />
+                        </Route>
+
+                        <Route path="/locations/:locationId(\d+)" render={
+                                    props => <LocationDetail {...props} />
+                                } />
+                    </EmployeeProvider>
+                </AnimalProvider>
             </LocationProvider>
 
             <AnimalProvider>

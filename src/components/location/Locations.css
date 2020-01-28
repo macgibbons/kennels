@@ -11,3 +11,22 @@
       border: 1px solid #eee;
       border-radius: 4px;
   }
+
+  .location__detail {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 4px;
+  }
+
+  .location__employeeHeader {
+      font-size: 12pt;
+      margin: 10px 0 10px 0;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+  }
