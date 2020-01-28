@@ -4,6 +4,8 @@ import { locationContext } from "./LocationProvider"
 import { EmployeeContext } from "../employee/EmployeeProvider";
 import { AnimalContext } from "../animal/AnimalProvider";
 import "./Locations.css"
+import { Link } from "react-router-dom"
+
 
 
 export default (props) => {
@@ -24,15 +26,17 @@ export default (props) => {
             <address>{ location.address }</address>
             <div>Currently carring for {
                 animalArray.map( (a)=> {
-                    return `${a.name}, `
+                    return  <Link to={`/animals/${a.id}`}>
+                                { a.name }, { }
+                            </Link>
                 })
             }
             </div>
 
-            <div className="location__employeeHeader">We currently have {employees.length} well-trained animal lovers and trainers</div>
+            <div className="location__employeeHeader">We currently have {employeeArray.length} well-trained animal lovers and trainers</div>
             <div className="location__employees"> 
                 {
-                    employees.map( (e)=>{
+                    employeeArray.map( (e)=>{
                         return `${e.name}, `
                     })
                 }
