@@ -2,14 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
   }
   
   .location {
       flex-basis: 28%;
-      margin: 1em;
+      margin: 1em auto 1em auto;
       padding: 1em;
       border: 1px solid #eee;
       border-radius: 4px;
+      
   }
 
   .location__detail {
@@ -29,4 +31,10 @@
       margin: 10px 0 10px 0;
       padding-top: 10px;
       border-top: 1px solid #eee;
+  }
+
+  .location__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
