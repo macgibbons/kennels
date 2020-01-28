@@ -30,6 +30,12 @@ export const AnimalProvider = (props) => {
             .then(getAnimals)
     }
 
+    const releaseAnimal = animalId => {
+        return fetch(`http://localhost:8088/animals/${animalId}`, {
+            method: "DELETE"
+        })
+            .then(getAnimals)
+    }
     /*
         Load all animals when the component is mounted. Ensure that
         an empty array is the second argument to avoid infinite loop.
@@ -44,7 +50,7 @@ export const AnimalProvider = (props) => {
 
     return (
         <AnimalContext.Provider value={{
-            animals, addAnimal
+            animals, addAnimal, releaseAnimal
         }}>
             {props.children}
         </AnimalContext.Provider>
