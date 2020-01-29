@@ -30,6 +30,13 @@ export const EmployeeProvider = (props) => {
             .then(getEmployees)
     }
 
+    const releaseEmployee = employeeId => {
+        return fetch(`http://localhost:8088/employees/${employeeId}`, {
+            method: "DELETE"
+        })
+            .then(getEmployees)
+    }
+
     /*
         Load all Employees when the component is mounted. Ensure that
         an empty array is the second argument to avoid infinite loop.
@@ -44,7 +51,7 @@ export const EmployeeProvider = (props) => {
 
     return (
         <EmployeeContext.Provider value={{
-            employees, addEmployee
+            employees, addEmployee, releaseEmployee
         }}>
             {props.children}
         </EmployeeContext.Provider>

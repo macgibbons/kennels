@@ -64,28 +64,30 @@ export default props => {
     return (
         <form className="animalForm">
             <h2 className="animalForm__title">{editMode ? "Update Animal" : "Admit Animal"}</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Animal name: </label>
-                    <input type="text" name="name" required autoFocus className="form-control"
-                        proptype="varchar"
-                        placeholder="Animal name"
-                        defaultValue={animal.name}
-                        onChange={handleControlledInputChange}
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="breed">Animal breed: </label>
-                    <input type="text" name="breed" required className="form-control"
-                        proptype="varchar"
-                        placeholder="Animal breed"
-                        defaultValue={animal.breed}
-                        onChange={handleControlledInputChange}
-                    />
-                </div>
-            </fieldset>
+            <div className="wrapper">
+                <fieldset>
+                    <div className="animal-form-group">
+                        <label htmlFor="name">Animal name: </label>
+                        <input type="text" name="name" required autoFocus className="form-control"
+                            proptype="varchar"
+                            placeholder="Animal name"
+                            defaultValue={animal.name}
+                            onChange={handleControlledInputChange}
+                            />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="animal-form-group">
+                        <label htmlFor="breed">Animal breed: </label>
+                        <input type="text" name="breed" required className="form-control"
+                            proptype="varchar"
+                            placeholder="Animal breed"
+                            defaultValue={animal.breed}
+                            onChange={handleControlledInputChange}
+                            />
+                    </div>
+                </fieldset>
+            </div>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="locationId">Location: </label>
