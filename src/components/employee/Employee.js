@@ -4,18 +4,22 @@ import { EmployeeContext } from "./EmployeeProvider";
 
 
 export default ({ employee }) => {
+
     const { releaseEmployee } = useContext(EmployeeContext)
-    
-    return(
-    <section className="employee">
-        <h3 className="employee__name">{employee.name}</h3>
-            <div className="employee__location">{employee.location}</div>
-            <button className="btn--release"
-                        onClick={() => {
-                            releaseEmployee(employee.id)
-                                
-                    }}
-            >Fire Employee</button>
-    </section>
-)}
+
+        return (
+        <section className="employee">
+            <h3 className="employee__name">{employee.name}</h3>
+                <div className="employee__location">{employee.location}</div>
+                <button className="btn--release"
+                            onClick={() => {
+
+                                window.confirm(`Are you sure you want to fire ${employee.name}?`)
+                                releaseEmployee(employee.id)
+                                    
+                        }}
+                >Fire Employee</button>
+        </section>
+    )
+}
 

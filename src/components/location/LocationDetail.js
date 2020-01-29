@@ -27,9 +27,9 @@ export default (props) => {
             <div>Currently carring for {
                 animalArray.map( (a)=> {
                     return  <Link to={`/animals/${a.id}`}>
-                                { a.name }, { }
+                                { a.name }
                             </Link>
-                })
+                }).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
             }
             </div>
 
@@ -37,11 +37,12 @@ export default (props) => {
             <div className="location__employees"> 
                 {
                     employeeArray.map( (e)=>{
-                        return `${e.name}, `
-                    })
+                        return `${e.name}`
+                    }).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
                 }
             </div>
         </section>
     )
 
 }
+
